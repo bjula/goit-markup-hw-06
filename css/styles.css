@@ -756,6 +756,7 @@ h1, h2, h3, h4, p, a, ul, li{
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-input::placeholder{
@@ -767,9 +768,10 @@ h1, h2, h3, h4, p, a, ul, li{
 
 }
 
-/* .footer-input:focus:not(:placeholder-shown){
-    outline: var(--accent-color);
-} */
+.footer-input:focus{
+    outline: none;
+    border-color: var(--accent-color);
+}
 
 .btn-send{
     display: flex;
@@ -899,6 +901,7 @@ h1, h2, h3, h4, p, a, ul, li{
 
 .form-input-wrap{
     position: relative;
+    
 }
 
 .form-field label{
@@ -913,14 +916,22 @@ h1, h2, h3, h4, p, a, ul, li{
 
 }
 
-
-.form-field input{
+.form-input-wrap input{
     margin: 0;
     padding: 11px 42px;
+    width: 100%;
+    
 
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
     border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input-wrap input:focus, 
+.form-field textarea:focus{
+    outline: none;
+    border-color: var(--accent-color);
 }
 
 .form-icon{
@@ -931,6 +942,11 @@ h1, h2, h3, h4, p, a, ul, li{
     display: block;
     width: 18px;
     height: 18px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input-wrap input:focus + .form-icon{
+    fill: var(--accent-color);
 }
 
 .form-field textarea{
@@ -941,7 +957,10 @@ h1, h2, h3, h4, p, a, ul, li{
 
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
-    border-radius: 4px;}
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 
 .form-field textarea::placeholder{
     font-weight: normal;
