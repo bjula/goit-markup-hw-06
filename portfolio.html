@@ -14,7 +14,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" rel="stylesheet"/>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
-<>
+<body>
     <!--                header portfolio                  -->
     <header class="page-header">
         <div class="container main-nav">
@@ -37,13 +37,15 @@
                     <a href="mailto:info@devstudio.com" class="contact-link link">
                         <svg class="contact-icon" width="16" height="12">
                             <use href="./images/icons.svg#icon-envelope"></use>
-                        </svg> info@devstudio.com</a>
+                        </svg> info@devstudio.com
+                    </a>
                 </li>
                 <li class="item">
                     <a href="tel:+380961111111" class="contact-link link">
                         <svg class="contact-icon" width="10" height="16">
                             <use href="./images/icons.svg#icon-smartphone"></use>
-                        </svg> +38 096 111 11 11</a>
+                        </svg> +38 096 111 11 11
+                    </a>
                 </li>
             </ul>
         </div>
@@ -232,6 +234,19 @@
                         </a>
                     </li>
                 </ul>
+            </div>
+            <div class="footer-form">
+                <h3 class="footer-title">Подпишитесь на рассылку</h3>
+                <form class="footer-mail-form">
+                    <label for="mail">
+                        <input type="email" name="mail" id="mail" placeholder="E-mail" class="footer-input">
+                    </label>
+                    <button type="submit" class="hero-button btn-send">Подписаться
+                        <svg class="footer-mail-icon">
+                            <use href="./images/icons.svg#icon-send"></use>
+                        </svg>
+                    </button>
+                </form>
             </div>
         </div>
     </footer>

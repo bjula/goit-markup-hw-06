@@ -393,7 +393,7 @@
             </div>
             <div class="footer-form">
                 <h3 class="footer-title">Подпишитесь на рассылку</h3>
-                <form class="footer-mail-form">
+                <form class="footer-mail-form" autocomplete="off">
                     <label for="mail">
                         <input type="email" name="mail" id="mail" placeholder="E-mail" class="footer-input">
                     </label>
@@ -404,7 +404,6 @@
                     </button>
                 </form>
             </div>
-
         </div>
     </footer>
 
@@ -416,7 +415,7 @@
                     <use href="./images/icons.svg#icon-close-black"></use>
                 </svg>
             </button>
-            <form class="modal-form">
+            <form class="modal-form" autocomplete="off">
                 <b class="form-title">Оставьте свои данные, мы вам перезвоним</b>
                 <div class="form-field">
                     <label for="name">Имя</label>
@@ -445,15 +444,21 @@
                         </svg>
                     </div>
                 </div>  
-                <div class="form-field">
+                <div class="form-field form-comment">
                     <label for="comment">Комментарий</label>
                     <textarea name="comment" id="comment" rows="5" placeholder="Введите текст"></textarea>
-                </div>           
-
-                <input type="checkbox" name="agreement" id="agreement">
-                <label for="agreement">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></label>
-                
-                <button type="submit" class="hero-button ">Отправить</button>                               
+                </div>   
+                <div class="form-check">
+                    <input type="checkbox" name="agreement" id="agreement" class="input-check visually-hidden">
+                    <label for="agreement" class="check-text">
+                        <span class="check-item">
+                            <svg class="check-icon">
+                                <use href="./images/icons.svg#icon-Vector"></use>
+                            </svg>
+                        </span> Соглашаюсь с рассылкой и принимаю <a href="" class="link-agreement">Условия договора</a>
+                    </label>
+                </div>
+                <button type="submit" class="hero-button button-send">Отправить</button>                               
             </form>
         </div>
     </div>
